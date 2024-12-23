@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Commande</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4caf50, #ffeb3b);
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 5px solid #ffffff;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4caf50;
+            font-size: 2.4em;
+            text-shadow: 1px 1px 4px #ffeb3b;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #fff8e1;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ffeb3b;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 235, 59, 0.8);
+            background-color: #ffffff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .form-group button:hover {
+            background-color: #388e3c;
+            transform: translateY(-3px);
+        }
+
+        .form-container footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .back-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #ffeb3b;
+            color: #4caf50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #ffd54f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .form-group button {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .form-container h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Passer une Commande</h1>
+        <form action="/submit-order" method="post">
+            <!-- Section Produits -->
+            <div class="form-group">
+                <label for="product">Produit :</label>
+                <select id="product" name="product" required>
+                    <option value="">-- Sélectionnez un produit --</option>
+                    <option value="Pizza Margarita">Saumon Grillé</option>
+                    <option value="Salade César">Bol Méditerranéen</option>
+                    <option value="Pâtes Carbonara">Buddha Bowl</option>
+                    <option value="Pâtes Carbonara">Champignon Farci</option>
+                   <option value="Pâtes Carbonara">Poulet Citron Herbes</option>
+                   <option value="Pâtes Carbonara">Salade Fraise-Amande</option>
+                   <option value="Pâtes Carbonara">Green Smoothie</option>
+                    <option value="Pâtes Carbonara">Mango Smoothie</option>
+                    <option value="Pâtes Carbonara">Berry Smoothie</option>
+                     <option value="Pâtes Carbonara">Smoothie</option>
+                      <option value="Pâtes Carbonara">Smoothie kiwi</option>
+                         <option value="Pâtes Carbonara">>Jus orange</option>
+
+
+
+
+
+
+
+                </select>
+            </div>
+
+            <!-- Quantité -->
+            <div class="form-group">
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+
+            <!-- Informations personnelles -->
+            <div class="form-group">
+                <label for="name">Nom complet :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9+()\- ]{7,}"
+                    placeholder="Exemple : +33 6 12 34 56 78" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Adresse de livraison :</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <!-- Soumettre -->
+            <div class="form-group">
+                <button type="submit">Passer la commande</button>
+            </div>
+        </form>
+
+        <!-- Bouton Retour -->
+        <a href="perfect food.html" class="back-button">Retour à la page principale</a>
+
+        <footer>
+            &copy; 2024 Votre Restaurant. Tous droits réservés.
+        </footer>
+    </div>
+
+</body>
+
+</html>

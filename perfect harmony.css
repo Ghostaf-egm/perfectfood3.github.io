@@ -1,0 +1,271 @@
+:root{
+    --primary:#FEA116;
+    --light:#F1F8FF;
+    --dark:green;
+}
+#hov:hover{
+    color: #FEA116;
+    
+}
+#singup{
+    display: inline-block;
+        padding: 15px 35px;
+        background-color: orange;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 3rem;
+        transition: all .50s ease;
+
+}
+#acheter{
+    display: inline-block;
+        padding: 15px 35px;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 3rem;
+        transition: all .50s ease;
+}
+#bb{
+
+    font-size: 28px;
+}
+
+
+#heroo{
+    font-weight: 700;
+    margin-inline:auto;
+    margin: bottom 2rem;
+    padding:1rem 2rem;
+    font-family: cursive;
+    border: 2px dashed gold;
+ 
+}
+
+
+
+#plat{
+    animation: imgRotate  50s linear infinite;
+
+}
+@keyframes imgRotate {
+
+100%{
+    transform:  rotate(360deg);
+}
+}
+
+#service1{
+    box-shadow: 0 0 45px rgba(0,0,0, .08);
+    transition: .5s;
+}
+#service1:hover{
+    background: var(--primary);
+}
+#service2 {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+#service2:hover {
+    background: var(--primary);
+}
+#service3 {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+#service3:hover {
+    background: var(--primary);
+}
+#service4 {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+#service4:hover {
+    background: var(--primary);
+}
+
+#icon1{
+    transition: .5s;
+}
+#icon1:hover{
+    color: var(--light);
+}
+
+#icon2 {
+    transition: .5s;
+}
+
+#icon2:hover {
+    color: var(--light);
+}
+
+#icon3 {
+    transition: .5s;
+}
+
+#icon3:hover {
+    color: var(--light);
+}
+
+#icon4 {
+    transition: .5s;
+}
+
+#icon4:hover {
+    color: var(--light) ;
+}
+.ABOUT{
+    padding: 10dvh;
+    
+}
+
+
+.section {
+    margin-top: 50px;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 200px;
+
+}
+.banner__card{
+    padding: 1rem;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+
+}
+
+.banner__card:nth-child(1){
+    background-image: url(plat\ special\ 1.webp);
+    grid-area: 1/1/3/2;
+}
+
+.banner__card:nth-child(2) {
+    background-image: url(plat\ special\ 2.webp);
+    
+}
+.banner__card:nth-child(3) {
+    background-image: url(drink\ special\ 1.webp);
+    
+}
+.banner__card p{
+    margin-bottom:  .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:black;
+}
+@media (width > 540px){
+    .section{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+
+.banner__card h4{
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+.banner__card{
+    padding: 1.5rem;
+}
+
+#plats{
+    padding: 10dvh;
+}
+
+#MENU {
+    padding: 4dvb;
+
+}
+
+ .menu-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 20px;
+     background: #ffffff;
+ }
+
+ .menu-card {
+     background: #ffffff;
+     color: #333;
+     border-radius: 15px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     padding: 20px;
+ }
+
+ .menu-card img {
+     max-width: 100%;
+     border-radius: 10px;
+ }
+
+ .menu-card h3 {
+     font-size: 1.5em;
+     color: #4caf50;
+ }
+
+   .menu-card p {
+       color: #666;
+       font-size: 0.9em;
+       margin: 10px 0;
+   }
+
+   .price-button {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 15px;
+   }
+
+   .price-button span {
+       font-size: 1.2em;
+       color: orange;
+       font-weight: bold;
+   }
+
+   .price-button button {
+       background: none;
+       border: none;
+       padding: 0;
+       cursor: pointer;
+   }
+         .price-button button .icon {
+             width: 24px;
+             height: 24px;
+             transition: transform 0.3s;
+         }
+    
+         #icon:hover {
+             transform: scale(1.2);
+             color: #4caf50;
+    
+         }
+         .yoyo{
+            display: inline-block;
+            padding: 15px 35px;
+            background-color:orange;
+            color: black;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 3rem;
+            transition: all .50s ease;
+            
+            
+         }
+         .row-btn{
+            text-align: center;
+         }
+        
+         
+         .yoyo:hover{
+            background-color:orange;
+         }
